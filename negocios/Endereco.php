@@ -1,4 +1,4 @@
-<?php>
+<?php
     class Endereco{
         //declaracao de variáveis
         private $rua;
