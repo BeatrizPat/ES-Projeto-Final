@@ -1,5 +1,5 @@
 <?php
-enum Pagamento
+enum EnumPagamento
 {
     case PIX;
     case CARTÃO;
