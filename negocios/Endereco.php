@@ -8,14 +8,25 @@
         private $complemento;
         private $pontoReferencia;
 
-        public function __construct($rua, $numero, $cep, $bairro, $complemento, $pontoReferencia){
-            $this->rua =  $rua;
-            $this->numero =  $numero;
-            $this->cep =  $cep;
+        //o '=null' é usado como sobrecarga do metodo construtor, pois para uma entrega nao importa qual rua que voce esta, mas sim somente seu bairro
+        public function __construct($bairro, $rua=null, $numero=null, $cep=null, $complemento=null, $pontoReferencia=null){
+            if($rua !== null)
+                $this->rua =  $rua;
+            if($numero !== null)
+                $this->numero =  $numero;
+            if($cep !== null)
+                $this->cep =  $cep;
+
             $this->bairro =  $bairro;
-            $this->complemento =  $complemento;
-            $this->pontoReferencia =  $pontoReferencia;
+
+            if($complemento !== null)
+                $this->complemento =  $complemento;
+            if($pontoReferencia !== null)
+                $this->pontoReferencia =  $pontoReferencia;
         }
+
+        
+
         public function getRua(){
             return $this->rua;
         }
