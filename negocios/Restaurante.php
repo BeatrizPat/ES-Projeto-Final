@@ -1,5 +1,7 @@
 <?php
-    require_once(__DIR__.'/../persistencia/RestaurantePersist.php');
+    namespace negocios;
+    use persistencia\RestaurantePersist;
+    
     class Restaurante{
         private $nome;
 

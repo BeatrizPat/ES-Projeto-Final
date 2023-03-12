@@ -1,5 +1,7 @@
 <?php
-    require_once(__DIR__.'/Endereco.php');
+    namespace negocios;
+    use negocios\Endereco;
+    
     class Entrega {
         private $valor;
         private Endereco $localizacao;

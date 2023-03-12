@@ -1,4 +1,5 @@
 <?php
+    namespace negocios;
     class Endereco{
         //declaracao de variáveis
         private $rua;

@@ -1,5 +1,7 @@
 <?php
-    require_once(__DIR__.'/Endereco.php');
+    namespace negocios;
+    use negocios\Endereco;
+    
     class Cliente {
         private $nome;
         private $cpf;

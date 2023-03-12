@@ -1,8 +1,9 @@
 <?php
-enum EnumPagamento
-{
-    case PIX;
-    case CARTÃO;
-    case DINHEIRO;
-}
+    namespace negocios;
+    enum EnumPagamento
+    {
+        case PIX;
+        case CARTÃO;
+        case DINHEIRO;
+    }
 ?>

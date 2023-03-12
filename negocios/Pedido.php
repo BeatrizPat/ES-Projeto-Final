@@ -1,8 +1,10 @@
 <?php
-    require_once(__DIR__.'/Item.php');
-    require_once(__DIR__.'/Cliente.php');
-    require_once(__DIR__.'/Entrega.php');
-    require_once(__DIR__.'/EnumPagamento.php');
+    namespace negocios;
+    use negocios\Item;
+    use negocios\Entrega;
+    use negocios\Cliente;
+    use negocios\EnumPagamento;
+    
     class Pedido{
         private $precoTotal = 0;
 
