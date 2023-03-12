@@ -42,6 +42,10 @@ class RestaurantePersist{
             if($endereco->getBairro() == $entrega->getLocalizacao()->getBairro())
                 return $entrega;
     }
+
+    public function bairrosDisponiveis(){
+        return $this->arr_enderecos;
+    }
 }
 
 ?>

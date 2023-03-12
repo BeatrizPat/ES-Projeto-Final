@@ -1,4 +1,5 @@
 <?php
+    require_once(__DIR__.'/../persistencia/RestaurantePersist.php');
     class Restaurante{
         private $nome;
 
@@ -16,6 +17,10 @@
 
         public function getEntrega(Endereco $endereco){
             return $this->restaurantePersist->resgatarEntrega($endereco);
+        }
+
+        public function bairrosDisponiveis(){
+            return $this->restaurantePersist->bairrosDisponiveis();
         }
     }
 ?>

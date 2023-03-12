@@ -1,4 +1,5 @@
 <?php
+    require_once(__DIR__.'/Endereco.php');
     class Entrega {
         private $valor;
         private Endereco $localizacao;

@@ -1,11 +1,12 @@
 <?php
+    require_once(__DIR__.'/Endereco.php');
     class Cliente {
         private $nome;
         private $cpf;
         private $localizacao;
 
         //Construtor da Classe Cliente
-        public function __construct($nome, $cpf, $localizacao) {
+        public function __construct($nome, $cpf, Endereco $localizacao) {
             $this->$nome = $nome;
             $this->$cpf = $cpf;
             $this->$localizacao = $localizacao;

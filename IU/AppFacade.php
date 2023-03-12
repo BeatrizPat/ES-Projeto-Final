@@ -1,6 +1,7 @@
 <?php
-class AppFacade{
-    
-}
+    class AppFacade{
+
+        
+    }
 
 ?>

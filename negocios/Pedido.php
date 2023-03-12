@@ -1,5 +1,8 @@
 <?php
-
+    require_once(__DIR__.'/Item.php');
+    require_once(__DIR__.'/Cliente.php');
+    require_once(__DIR__.'/Entrega.php');
+    require_once(__DIR__.'/EnumPagamento.php');
     class Pedido{
         private $precoTotal = 0;
 
