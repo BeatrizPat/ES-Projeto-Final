@@ -3,6 +3,9 @@
     
     class AppFacade{
         //apresentar 
+        public function telaDePagamento(){
+            
+        }
     }
 
 ?>
