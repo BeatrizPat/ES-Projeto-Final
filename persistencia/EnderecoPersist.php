@@ -2,7 +2,7 @@
     namespace persistencia;
 
     class EnderecoPersist{
-        function connectBDCliente() {
+        public function connectBDCliente() {
             $servername = "localhost";
             $username = "root";
             $dbname = "myBD";
@@ -17,7 +17,7 @@
         }
 
         public function resgatarEndereco($idCliente){
-            $conn = connectBDCliente();
+            $conn = $this->connectBDCliente();
             $sql = "SELECT * FROM localizacaoCliente WHERE id_cliente = $idCliente";
             $endereco = $conn->query($sql);
             $row = $endereco->fetch_assoc();

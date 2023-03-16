@@ -1,7 +1,9 @@
 <?php
     namespace negocios;
     use negocios\Endereco;
-use persistencia\EnderecoPersist;
+    use persistencia\EnderecoPersist;
+    require_once __DIR__.'/../persistencia/EnderecoPersist.php';
+    require_once __DIR__.'/Endereco.php';
 
     class Cliente {
         private $nome;

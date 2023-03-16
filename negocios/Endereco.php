@@ -1,8 +1,6 @@
 <?php
     namespace negocios;
 
-use persistencia\EnderecoPersist;
-
     class Endereco{
         //declaracao de variáveis
         private $rua;
