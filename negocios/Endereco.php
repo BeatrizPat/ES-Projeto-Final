@@ -1,5 +1,8 @@
 <?php
     namespace negocios;
+
+use persistencia\EnderecoPersist;
+
     class Endereco{
         //declaracao de variáveis
         private $rua;
@@ -31,18 +34,23 @@
         public function getRua(){
             return $this->rua;
         }
+
         public function getNumero(){
             return $this->numero;
         }
+
         public function getCep(){
             return $this->cep;
         }
+
         public function getBairro(){
             return $this->bairro;
         }
+
         public function getComplemento(){
             return $this->complemento;
         }
+
         public function getPontoReferencia(){
             return $this->pontoReferencia;
         }
