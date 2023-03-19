@@ -4,6 +4,7 @@
     use negocios\Entrega;
     
     class RestaurantePersist{
+        private static RestaurantePersist $singleton;
 
         private $arr_enderecos;
         private $arr_entregas;
@@ -38,6 +39,14 @@
                 new Entrega($this->arr_enderecos[8], 6, 60),
                 new Entrega($this->arr_enderecos[9], 8, 65)
             );
+        }
+
+        //retorna instancia Singleton
+        public static function getInstance(){
+                if(self::$singleton == null){
+                    self::$singleton = new RestaurantePersist();
+                }
+                return self::$singleton;
         }
 
         //busca a Entrega respectiva pro endereco informado

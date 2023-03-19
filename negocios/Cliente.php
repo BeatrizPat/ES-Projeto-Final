@@ -14,10 +14,11 @@
         public function __construct($nome, $cpf, $id) {
             $this->$nome = $nome;
             $this->$cpf = $cpf;
-            $endereco = new EnderecoPersist(); 
+            $endereco = EnderecoPersist::getInstance(); 
             $temp = $endereco->resgatarEndereco($id);
             $this->localizacao = new Endereco($temp["bairro"], $temp["rua"], $temp["numero"], $temp["cep"], $temp["complemento"], $temp["ponto_referencia"]);
         }
+        
         //Getters e Setters
         public function getNome() {
             return $this->nome;

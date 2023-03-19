@@ -4,7 +4,8 @@
     use negocios\Entrega;
     use negocios\Cliente;
     use negocios\EnumPagamento;
-    
+    use persistencia\RestaurantePersist;
+
     class Pedido{
         private $precoTotal = 0;
 
@@ -19,13 +20,10 @@
 
         private Entrega $entrega;
 
-        private EnumPagamento $tipoPagamento;
+        private EnumPagamento $tipoPagamento;//nenhuma US da sprint envolve isso
 
-        public function __construct(Entrega $entrega, Cliente $cliente, EnumPagamento $enumPagamento){
+        public function __construct(Cliente $cliente){
             $this->cliente = $cliente;
-            $this->entrega = $entrega;
-            $this->tipoPagamento = $enumPagamento;
-
 
             //acha preco total do pedido
             foreach($this->itens as $item){
@@ -33,6 +31,11 @@
             }
             $this->precoTotal+=$this->entrega->getValor();
 
+        }
+
+        public function setEntrega(Endereco $endereco){
+            $temp = RestaurantePersist::getInstance();
+            $this->entrega = $temp->resgatarEntrega($endereco);
         }
 
         public function getPrecoTotal(){
