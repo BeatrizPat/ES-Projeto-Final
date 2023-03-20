@@ -12,7 +12,7 @@
     fechaBD($conexao);
       
     function connectBDCliente() {
-        $servername = "localhost";
+        $servername = "localhost:3307"; //port do localhost pode variar
         $username = "root";
         $dbname = "myBD";
         $psswd = "";
@@ -49,7 +49,7 @@
     }
 
     class EnderecoPersist{
-        private static EnderecoPersist $singleton;
+        private static ?EnderecoPersist $singleton = null; //inicializar com null para nao dar conflito com undefined
 
         private function __construct(){
 
