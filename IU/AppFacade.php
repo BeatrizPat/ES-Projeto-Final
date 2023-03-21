@@ -3,14 +3,10 @@
 
     class AppFacade{
         //apresentar 
-        public function telaDePagamento(){
-            
-            
+        public function telaDePagamento($pedido){
+            echo $pedido->getPrecoTotal();    
         }
 
-        public function exibePrecoTotalPedido(Pedido $pedido) {
-            echo $pedido->getPrecoTotal();
-        }
     }
 
 ?>

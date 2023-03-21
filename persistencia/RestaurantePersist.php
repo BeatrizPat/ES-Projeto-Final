@@ -2,6 +2,9 @@
     namespace persistencia;
     use negocios\Endereco;
     use negocios\Entrega;
+
+    require_once __DIR__.'/../negocios/Entrega.php';
+
     
     class RestaurantePersist{
         private static RestaurantePersist $singleton;
@@ -43,10 +46,10 @@
 
         //retorna instancia Singleton
         public static function getInstance(){
-                if(self::$singleton == null){
-                    self::$singleton = new RestaurantePersist();
-                }
-                return self::$singleton;
+            if(!isset(self::$singleton)){
+                self::$singleton = new RestaurantePersist();
+            }
+            return self::$singleton;
         }
 
         //busca a Entrega respectiva pro endereco informado

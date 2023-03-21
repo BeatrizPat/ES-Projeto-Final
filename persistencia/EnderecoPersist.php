@@ -12,7 +12,7 @@
     fechaBD($conexao);
       
     function connectBDCliente() {
-        $servername = "localhost:3307"; //port do localhost pode variar
+        $servername = "localhost"; //port do localhost pode variar
         $username = "root";
         $dbname = "myBD";
         $psswd = "";

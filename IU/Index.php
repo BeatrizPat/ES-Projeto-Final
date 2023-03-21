@@ -3,11 +3,14 @@
 
     use IU\AppFacade;
     use negocios\Cliente;
+    use negocios\Pedido;
+
     require_once __DIR__.'/../negocios/Cliente.php';
-    require_once __DIR__.'/../IU/AppFacade.php';
+    require_once __DIR__.'/../negocios/PedidoFacade.php';
     require_once __DIR__.'/../IU/AppFacade.php';
 
     $cliente = new Cliente("Joao da Silva", "40040040022", 2);//essa linha serve para testar a recuperacao no BD (US3). é esperado que seu atributo localizacao esteja correto
+    $pedido = new Pedido($cliente);
     $facade = new AppFacade();
 ?>
 
@@ -38,13 +41,14 @@
                 <?php
                     //apresenta preco total do pedido (US1 AC1)
 
-                    //$facade->exibePrecoTotalPedido($pedido);
+                    $pedido->exibirInfo();
                     
-                    echo $cliente->getNome(); //teste
-
                 ?>
                 <h2>Localização</h2>
                 <?php
+                    echo $cliente->getLocalizacao()->getRua();
+                    echo $cliente->getLocalizacao()->getBairro();
+                    echo $cliente->getLocalizacao()->getNumero();
                     //apresenta localizacao do Cliente (US2 AC1)
                 ?>
             </div>
