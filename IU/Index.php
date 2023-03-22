@@ -6,7 +6,7 @@
     use negocios\Pedido;
 
     require_once __DIR__.'/../negocios/Cliente.php';
-    require_once __DIR__.'/../negocios/PedidoFacade.php';
+    require_once __DIR__.'/../negocios/Pedido.php';
     require_once __DIR__.'/../IU/AppFacade.php';
 
     $cliente = new Cliente("Joao da Silva", "40040040022", 2);//essa linha serve para testar a recuperacao no BD (US3). é esperado que seu atributo localizacao esteja correto
@@ -37,16 +37,11 @@
     <body> 
         <div class = "tela">
             <div class = "dados">
-                <h1>Pagamento</h1>
+                <h1>Tela de Pagamento</h1>
                 <?php
                     //apresenta preco total do pedido (US1 AC1)
-                    $pedido->exibirInfoPedido();
-                    
-                ?>
-                <h2>Localização</h2>
-                <?php
                     //apresenta localizacao do Cliente (US2 AC1)
-                    $pedido->exibirInfoCliente();
+                    $facade->telaDePagamento($pedido->getEntrega(), $pedido, $cliente->getLocalizacao());
                 ?>
             </div>
         </div>
