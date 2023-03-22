@@ -25,7 +25,7 @@
             }
             
             .dados {
-                padding: 10px 100px;
+                padding: 0px 100px 20px;
                 margin: auto;
                 border: 3px solid #146551;
                 border-radius: 10px;
