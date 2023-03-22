@@ -54,9 +54,12 @@
         public function getEntrega(){
             return $this->entrega;
         }
-        public function exibirInfo() {
+        public function exibirInfoPedido() {
             echo "Preço Total: R$ ".nl2br($this->precoTotal."\n");
             echo "Frete: R$ ".$this->entrega->getValor();
+        }
+        public function exibirInfoCliente() {
+            echo $this->cliente->getLocalizacao()->getRua()." ".$this->cliente->getLocalizacao()->getBairro().", ".$this->cliente->getLocalizacao()->getNumero();
         }
         
 

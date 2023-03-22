@@ -40,16 +40,13 @@
                 <h1>Pagamento</h1>
                 <?php
                     //apresenta preco total do pedido (US1 AC1)
-
-                    $pedido->exibirInfo();
+                    $pedido->exibirInfoPedido();
                     
                 ?>
                 <h2>Localização</h2>
                 <?php
-                    echo $cliente->getLocalizacao()->getRua();
-                    echo $cliente->getLocalizacao()->getBairro();
-                    echo $cliente->getLocalizacao()->getNumero();
                     //apresenta localizacao do Cliente (US2 AC1)
+                    $pedido->exibirInfoCliente();
                 ?>
             </div>
         </div>
